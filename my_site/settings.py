@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -75,12 +76,12 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'my_site_db',
-        'USER': 'postgres',
-        #'PASSWORD': '123',
-        'HOST': '127.0.0.1',
-        'PORT': '1234'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'USER': 'postgres',
+        # #'PASSWORD': '123',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '1234'
     }
 }
 
@@ -125,5 +126,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#USER
+AUTH_USER_MODEL = 'users.CustomUser'
 
 from .local_settings import *
