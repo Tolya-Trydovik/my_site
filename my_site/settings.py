@@ -130,4 +130,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #USER
 AUTH_USER_MODEL = 'users.CustomUser'
 
-from .local_settings import *
+#from .local_settings import *
